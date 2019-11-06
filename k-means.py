@@ -18,9 +18,8 @@ def LBP(image):
 
 types = ('*.tif', '*jpg2')
 imagePaths = []
-folder = ''
 for files in types :
-	imagePaths.extend(sorted(glob.glob(folder + files)))
+	imagePaths.extend(sorted(glob.glob(files)))
 
 images = [cv2.imread('{0}'.format(i),-1) for i in imagePaths]
 
@@ -70,6 +69,5 @@ for i in range(0,5):
     os.mkdir(diretory + classe + str(i))
 
 for i in range(0,5):
-  if (i>=0):
-    for j in range(len(saida1[i])):
-        shutil.copy(str(saida1[i][j][0]), 'C:/Users/augus/Documents/ProjPIBIC/example/'+'classe-'+str(saida1[i][j][1])+"/")
+  for j in range(len(saida1[i])):
+    shutil.copy(str(saida1[i][j][0]), 'C:/Users/augus/Documents/ProjPIBIC/example/'+'classe-'+str(saida1[i][j][1])+"/")
