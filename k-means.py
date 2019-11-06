@@ -17,9 +17,10 @@ def LBP(image):
     return features
 
 types = ('*.tif', '*jpg2')
+diretory = 'C:/Users/augus/Documents/ProjPIBIC/k-means/images/'
 imagePaths = []
 for files in types :
-	imagePaths.extend(sorted(glob.glob(files)))
+	imagePaths.extend(sorted(glob.glob(diretory + files)))
 
 images = [cv2.imread('{0}'.format(i),-1) for i in imagePaths]
 
@@ -49,9 +50,9 @@ for i in range(len(whitened)):
   b = np.concatenate((whitened_prepare[i][2], whitened_prepare[i][3]), axis=0)
   whitened[i] = np.concatenate((a,b), axis=0)
 
-#whitened = whiten(whitened)
-whitened = np.array(whitened)
-centroide,label = kmeans2(whitened, 5)
+whitened = whiten(whitened)
+clusters= 5
+centroide,label = kmeans2(data=whitened,k=clusters,iter=3000)
 
 saida = pd.DataFrame(data=[], columns=['image_name', 'label'])
 
@@ -59,15 +60,15 @@ saida['label'] = label
 saida['image_name'] = imagePaths
 
 saida1 = []
-for i in range(0,5):
+for i in range(0,clusters):
   saida1.append(saida[saida['label']==i].values)
 
 classe = 'classe-'
-diretory = 'C:/Users/augus/Documents/ProjPIBIC/example/'
+diretory = 'C:/Users/augus/Documents/ProjPIBIC/k-means/results/'
 
-for i in range(0,5):
+for i in range(0,clusters):
     os.mkdir(diretory + classe + str(i))
 
-for i in range(0,5):
+for i in range(0,clusters):
   for j in range(len(saida1[i])):
     shutil.copy(str(saida1[i][j][0]), diretory + classe + str(saida1[i][j][1]) + '/')
