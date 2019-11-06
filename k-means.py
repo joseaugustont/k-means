@@ -70,4 +70,4 @@ for i in range(0,5):
 
 for i in range(0,5):
   for j in range(len(saida1[i])):
-    shutil.copy(str(saida1[i][j][0]), 'C:/Users/augus/Documents/ProjPIBIC/example/'+'classe-'+str(saida1[i][j][1])+"/")
+    shutil.copy(str(saida1[i][j][0]), diretory + classe + str(saida1[i][j][1]) + '/')
