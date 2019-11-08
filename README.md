@@ -12,7 +12,7 @@ Agrupamento de imagens com o modelo k-means.
 ![grafico](https://github.com/joseaugustont/k-means/blob/master/cotovelo.jpg)
 
 
-### Skelearn (Sem uma amostra)
+### Sklearn (Sem uma amostra)
 
 * *Inercia* - **3760872.0839531864** 
 * *Silhueta* - **0.19886364042758942**
