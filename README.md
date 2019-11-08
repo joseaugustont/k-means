@@ -8,3 +8,5 @@ Agrupamento de imagens com o modelo k-means.
 *Não zeis por grupo:* **[20, 10, 0, 0]**
 
 *Zeis por grupo:* **[23, 20, 10, 1]**
+
+![grafico](https://github.com/joseaugustont/k-means/blob/master/cotovelo.jpg)
