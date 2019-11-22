@@ -46,3 +46,11 @@ Agrupamento de imagens com o modelo k-means.
 * Zeis por grupo: **[155, 86]**
 
 ![grafico](https://github.com/joseaugustont/k-means/blob/master/cotovelo-new2.jpg)
+
+
+### Resultado com número de classes ótimo
+
+* Inercia - **22768407.46851727**
+* Silhueta - **0.24763184785842896**
+* Não zeis por grupo: **[123, 0, 0, 29, 44, 150]**
+* Zeis por grupo: **[52, 47, 18, 120, 15, 63]**
