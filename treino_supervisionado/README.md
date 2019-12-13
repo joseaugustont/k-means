@@ -18,8 +18,8 @@ Resultados com kernel linear:
 
 ### Distribuição das imagens no treino:
 
-![grafico](https://github.com/joseaugustont/k-means/blob/master/treino%20supervisionado/distribui%C3%A7%C3%A3o-train.png)
+![grafico](https://github.com/joseaugustont/k-means/blob/master/treino_supervisionado/distribui%C3%A7%C3%A3o-train.png)
 
 ### Distribuição das imagens no teste:
 
-![grafico](https://github.com/joseaugustont/k-means/blob/master/treino%20supervisionado/distribui%C3%A7%C3%A3o-test.png)
+![grafico](https://github.com/joseaugustont/k-means/blob/master/treino_supervisionado/distribui%C3%A7%C3%A3o-test.png)
